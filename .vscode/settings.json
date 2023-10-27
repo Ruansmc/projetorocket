@@ -1,0 +1,9 @@
+{
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    },
+    "editor.autoClosingOvertype": "auto",
+    "editor.autoSurround": "languageDefined",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
+}
