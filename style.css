@@ -76,7 +76,7 @@ body * {
 #switch button {
     width: 32px;
     height: 32px;
-    background: white var(--switch-bg-url) no-repeat center;
+    background: rgb(233, 168, 227) var(--switch-bg-url) no-repeat center;
     border: 0;
     border-radius: 50%;
     position: absolute;
@@ -84,12 +84,16 @@ body * {
     right: 1;
     z-index: 1;
     transform: translateY(-50%);
+
+    animation: slide-back .2s;
+}
+#switc button:hover{
+outline: 8px solid var(--highlight-color)
 }
 
-
 .light #switch button {
-    right:0;
-    left: initial;
+    animation: slide-in 0.2s forwards;
+
 }
 
 
@@ -100,10 +104,10 @@ body * {
     /*surface-color-dark-mode*/
     background: var(--surface-color);
       /*stroke-color-dark-mode*/
-    border: 1px solid var(--stroke-color);
-    -webkit-backdrop-filter: blur(4px);
+    border: 2px solid var(--stroke-color);
+    -webkit-backdrop-filter: blur(9px);
     border-radius: 9999px;
-
+    
     
 }
 
@@ -187,5 +191,29 @@ footer {
 
     .light {
         --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
+
+
+
+/* animation */
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+
+}
+
+@keyframes slide-back{
+    from {
+        left:50%;
+
+    }
+    to{
+        Left: 0;
     }
 }
